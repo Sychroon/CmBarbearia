@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cinzel:wght@600;700;800&family=Poppins:wght@400;600;700&display=swap');
+
+/* Estilo para h1 - Título principal artístico */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 96px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-shadow:
+        0 0 20px rgba(0, 0, 0, 0.3),
+        2px 2px 8px rgba(255, 255, 255, 0.8),
+        4px 4px 16px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    font-style: italic;
+    text-transform: uppercase;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow:
+            0 0 20px rgba(0, 0, 0, 0.3),
+            2px 2px 8px rgba(255, 255, 255, 0.8),
+            4px 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    to {
+        text-shadow:
+            0 0 30px rgba(0, 0, 0, 0.5),
+            2px 2px 8px rgba(255, 255, 255, 0.8),
+            4px 4px 20px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Subtítulo */
+.Center-card p:first-of-type {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* Parágrafos descritivos */
+.Center-card p:last-of-type {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.8;
+    letter-spacing: 0px;
+    text-shadow: none;
+}
+
+.Center-card {
+    text-align: center;
+    padding: 60px 50px;
+    border-radius: 15px;
+    max-width: 700px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 56px;
+        letter-spacing: 2px;
+    }
+
+    .Center-card p:first-of-type {
+        font-size: 20px;
+    }
+
+    .Center-card p:last-of-type {
+        font-size: 15px;
+    }
+
+    .Center-card {
+        padding: 40px 30px;
+        max-width: 90vw;
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 36px;
+        letter-spacing: 1px;
+    }
+
+    .Center-card p:first-of-type {
+        font-size: 16px;
+    }
+
+    .Center-card p:last-of-type {
+        font-size: 13px;
+        letter-spacing: 0.5px;
+    }
+
+    .Center-card {
+        padding: 30px 20px;
+        max-width: 95vw;
+        border: 1px solid #ffd700;
+    }
+}

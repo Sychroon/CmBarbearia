@@ -5,51 +5,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CM Barber</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="cards.css">
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="button.css">
     <link rel="stylesheet" href="text.css">
+    <link rel="stylesheet" href="carousel.css">
 
 </head>
 
 
 <body>
     <header class="header-card">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="Imagens/Logo.png" alt="CM Barbearia Logo" class="logo">
+                <h1 class="brand-name">CM Barbearia</h1>
+            </div>
+            <nav class="navbar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <a href="#sobre-nos" class="nav-link">Sobre Nós</a>
+                <a href="#carousel" class="nav-link">Galeria</a>
+                <a href="form.html" class="nav-link">Agendar</a>
+            </nav>
+        </div>
     </header>
     <main>
         <div class="Center-card">
             <h1>CM Barbearia</h1>
-            <p style="color:#6b4738 ;">Seu corte sua identidade</p>
-            <P>Agende seu corte agora. Escolha o estilo e o horário ideal, e relaxe que a gente cuida do resto.
-            </P>
+            <p>Seu corte sua identidade</p>
+            <p>Agende seu corte agora. Escolha o estilo e o horário ideal, e relaxe que a gente cuida do resto.</p>
         </div>
 
         <a href="form.html" class="button-card">
-            Agendar Horário
+            Agendar
         </a>
     </main>
 
-
-
-
-    <footer class="footer-card">
-        <div class="Redes">
-
-            <p> Me siga nas redes </p>
-            <div class="icons-Redes">
-
+    <section class="sobre-nos" id="sobre-nos">
+        <div class="sobre-container">
+            <h2>Sobre a CM Barbearia</h2>
+            <div class="sobre-content">
+                <div class="sobre-texto">
+                    <p>
+                        Há mais de uma década, a CM Barbearia tem sido referência em cortes masculinos na região.
+                        Nossa equipe de profissionais experientes combina tradição e modernidade para oferecer
+                        serviços de qualidade excepcional.
+                    </p>
+                    <p>
+                        Utilizamos técnicas tradicionais aliadas às mais recentes tendências do mercado,
+                        garantindo que cada cliente saia satisfeito com seu novo visual. Nosso ambiente acolhedor
+                        e nossa atenção aos detalhes fazem da CM Barbearia muito mais do que uma simples barbearia
+                        - é um espaço onde você pode relaxar e cuidar da sua imagem.
+                    </p>
+                    <p>
+                        Venha nos conhecer e descubra por que tantos clientes confiam em nós para realçar
+                        sua identidade e estilo único.
+                    </p>
+                </div>
+                <div class="sobre-imagem">
+                    <img src="Imagens/mainimg.jpg" alt="Interior da CM Barbearia">
+                </div>
             </div>
         </div>
+    </section>
 
-        <p><strong>Rua das Acácias, 123 — Centro</strong></p>
-        <p>📞 (11) 99999-9999</p>
-        <p>🕒 Seg–Sex: 08h às 19h | Sáb: 08h às 17h</p>
+    <section class="nossos-servicos" id="servicos">
+        <div class="servicos-container">
+            <h2>Nossos Serviços</h2>
+            <div class="servicos-grid">
+                <!-- Card 1: Cabelo Masculino -->
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-scissors"></i>
+                    </div>
+                    <h3>Cabelo Masculino</h3>
+                    <p>
+                        Oferecemos diversos cortes para o cabelo masculino, desde os clássicos até os mais modernos.
+                        Nossos barbeiros dominam técnicas como degradê, navalhado e cortes sociais com precisão
+                        absoluta.
+                        Cada corte é personalizado de acordo com seu tipo de cabelo e estilo pessoal.
+                    </p>
+                    <ul>
+                        <li>Corte Tradicional</li>
+                        <li>Corte Degradê</li>
+                        <li>Corte Social</li>
+                        <li>Corte Navalhado</li>
+                    </ul>
+                </div>
 
+                <!-- Card 2: Barba -->
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-face-grin-beard"></i>
+                    </div>
+                    <h3>Barba & Rosto</h3>
+                    <p>
+                        Tratamento completo de barba com técnicas tradicionais de barbearia.
+                        Realizamos modelagem, aparação e acabamento com precisão, oferecendo também
+                        serviços premium como toalha quente hidratante para uma experiência relaxante.
+                    </p>
+                    <ul>
+                        <li>Barba Simples</li>
+                        <li>Barba Modelada</li>
+                        <li>Barba + Toalha Quente</li>
+                        <li>Limpeza de Rosto</li>
+                    </ul>
+                </div>
 
+                <!-- Card 3: Estética Masculina -->
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Estética Masculina</h3>
+                    <p>
+                        Cuidado completo com a aparência do homem moderno. Oferecemos serviços de design de sobrancelha,
+                        limpeza facial profunda e tratamentos especiais para manter sua pele saudável e rejuvenescida.
+                        Todos os serviços são realizados por profissionais qualificados.
+                    </p>
+                    <ul>
+                        <li>Design de Sobrancelha</li>
+                        <li>Limpeza Facial</li>
+                        <li>Hidratação Premium</li>
+                        <li>Tratamento Anti-Idade</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="galeria-fotos" id="carousel">
+        <div class="galeria-container">
+            <div class="galeria-grid">
+                <div class="galeria-item">
+                    <img src="Imagens/img01.jpg" alt="Galeria 1">
+                </div>
+                <div class="galeria-item">
+                    <img src="Imagens/img02.jpg" alt="Galeria 2">
+                </div>
+                <div class="galeria-item">
+                    <img src="Imagens/img03.jpg" alt="Galeria 3">
+                </div>
+                <div class="galeria-item">
+                    <img src="Imagens/img04.jpg" alt="Galeria 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-card">
+        <h3>CM Barber</h3>
+        <p>© 2024 Todos os direitos reservados</p>
     </footer>
 
-
-
+    <script src="Program.js"></script>
 
 </html>

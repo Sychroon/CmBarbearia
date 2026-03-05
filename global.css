@@ -4,9 +4,21 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background: linear-gradient(135deg, #e6e5e5, #e6e1e1);
-    color: #F5F5F5;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8F8F8 50%, #FFFFFF 100%);
+    background-attachment: fixed;
+    color: #000000;
+    font-family: 'Cinzel', serif;
+}
+
+body.form-body {
+    background: linear-gradient(180deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+    background-attachment: fixed;
+    color: #FFFFFF;
 }
 
 main {
@@ -15,9 +27,303 @@ main {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-
-    background-image: url("Imagens/mainimg.jpg");
+    padding: 40px 20px;
+    background: url("Imagens/mainimg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.45);
+    pointer-events: none;
+    z-index: 1;
+}
+
+main>* {
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    main {
+        min-height: auto;
+        padding: 60px 20px;
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    main {
+        padding: 40px 15px;
+    }
+}
+
+/* Footer Styles */
+.footer-card {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8F8F8 100%);
+    color: #000000;
+    padding: 30px 20px;
+    margin-top: 60px;
+    text-align: center;
+    border-top: 1px solid #E0E0E0;
+}
+
+.footer-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.footer-card p {
+    font-size: 0.9rem;
+    color: #666666;
+    margin: 0;
+}
+
+/* Seção Sobre Nós */
+.sobre-nos {
+    background: linear-gradient(180deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+    padding: 80px 20px;
+    margin: 40px 0;
+}
+
+.sobre-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sobre-nos h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.sobre-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.sobre-texto p {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #CCCCCC;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade Sobre Nós */
+/* Seção Nossos Serviços */
+.nossos-servicos {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8F8F8 50%, #FFFFFF 100%);
+    padding: 80px 20px;
+    margin: 40px 0;
+}
+
+.servicos-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.nossos-servicos h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.servico-card {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F5F5F5 100%);
+    border: 2px solid #E0E0E0;
+    border-radius: 15px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.servico-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-color: #333333;
+}
+
+.servico-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #333333, #666666);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+.servico-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.servico-card p {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.servico-card ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.servico-card li {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    color: #555555;
+    padding: 8px 0;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.servico-card li:last-child {
+    border-bottom: none;
+}
+
+/* Responsividade Nossos Serviços */
+@media (max-width: 768px) {
+    .nossos-servicos {
+        padding: 60px 15px;
+        margin: 30px 0;
+    }
+
+    .nossos-servicos h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .servicos-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .servico-card {
+        padding: 30px 20px;
+    }
+
+    .servico-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 35px;
+    }
+
+    .servico-card h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nossos-servicos {
+        padding: 40px 10px;
+    }
+
+    .nossos-servicos h2 {
+        font-size: 1.6rem;
+    }
+
+    .servico-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+    }
+
+    .servico-card h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+.sobre-nos h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.sobre-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.sobre-texto p {
+    font-size: 1rem;
+    text-align: left;
+}
+
+.sobre-imagem img {
+    height: 250px;
+}
+
+
+@media (max-width: 480px) {
+    .sobre-nos {
+        padding: 40px 10px;
+    }
+
+    .sobre-nos h2 {
+        font-size: 1.8rem;
+    }
 }
