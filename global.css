@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #e6e5e5, #e6e1e1);
+    color: #F5F5F5;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    background-image: url("Imagens/mainimg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,167 @@
+.header-card {
+    background-color: #2C1810;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #2C1810;
+    color: #F5F5F5;
+}
+
+.footer-card {
+    background-color: #2C1810;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #2C1810;
+    color: #F5F5F5;
+
+}
+
+
+.button-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6b4738;
+    height: 50px;
+    width: 170px;
+    color: #F5F5F5;
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.button-card:hover {
+    transform: scale(1.08);
+    border: 2px solid #F5F5F5;
+    box-shadow: 0 0 12px rgba(245, 245, 245, 0.6);
+}
+
+.Center-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+.agendamento-card {
+    border: 2px solid black;
+    display: flex;
+    height: 600px;
+    width: 1000px;
+    flex-direction: column;
+    align-items: right;
+    justify-content: right;
+    padding: 20px;
+    color: #2e2626;
+}
+
+.Ag-card {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.NovoAg-card {
+    text-align: left;
+    display: flex;
+    background-color: #2C1810;
+    color: white;
+    flex-direction: column;
+
+    justify-content: right;
+    padding: 20px;
+}
+
+.cadastro-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+}
+
+.campo-card {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.categorias {
+    border: #d4d4d4 solid 2px;
+    background-color: #ccbc9f;
+    width: 95%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.categorias button {}
+
+/* layout for the appointment form */
+#agendamentoForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campo-card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.campo-card input {
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 450px;
+}
+
+.resultado-servicos {
+    margin-top: 20px;
+}
+
+.resultado-servicos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resultado-servicos li {
+    margin: 5px 0;
+}
+
+.servico-card p {
+    margin-bottom: 10px;
+}
+
+.grid-card {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.campo-card input {
+    height: 60PX;
+    width: 360PX;
+    font-size: 20PX;
+}

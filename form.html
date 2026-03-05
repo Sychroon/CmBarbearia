@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="text.css">
+
+</head>
+
+<body>
+    <header class="header-card">
+    </header>
+    <div class="Ag-card">
+        <div class="agendamento-card">
+
+            <div class="NovoAg-card">
+                <p>Novo Agendamento</p>
+            </div>
+
+            <!-- FORMULÁRIO DE AGENDAMENTO -->
+            <form id="agendamentoForm" class="cadastro-card">
+                <div class="grid-card">
+                    <div class="campo-card ">
+                        <label for="Nome">
+                            <i class="fa-solid fa-user icon-nome"></i>
+                            <span class="Text-Primario">Nome</span>
+                        </label>
+                        <input type="text" class="input-transparente" id="Nome" name="nome"
+                            placeholder="Digite seu nome">
+                    </div>
+
+                    <div class="campo-card ">
+                        <label for="Telefone">
+                            <i class="fa-solid fa-phone icon-telefone"></i>
+                            <span class="Text-Primario">Telefone / WhatsApp</span>
+                        </label>
+                        <input type="tel" class="input-transparente" id="Telefone" name="telefone"
+                            placeholder="(21) 99999-9999">
+                    </div>
+
+                    <div class="campo-card ">
+                        <label for="Data">
+                            <i class="fa-solid fa-calendar icon-data"></i>
+                            <span class="Text-Primario">Data</span>
+                        </label>
+                        <input type="date" class="input-transparente" id="Data" name="data">
+                    </div>
+
+                    <div class="campo-card ">
+                        <label for="Horario">
+                            <i class="fa-solid fa-clock icon-horario"></i>
+                            <span class="Text-Primario">Horário</span>
+                        </label>
+                        <input type="time" class="input-transparente" id="Horario" name="horario">
+                    </div>
+                </div>
+
+                <!-- SERVIÇOS -->
+                <div class="servico-card campo-card">
+                    <p>Serviços</p>
+                    <div class="categorias">
+                        <button type="button" data-categoria="cabelo">Cabelo</button>
+                        <button type="button" data-categoria="barba">Barba e Rosto</button>
+                        <button type="button" data-categoria="combo">Combos</button>
+                    </div>
+                </div>
+
+                <!-- RESULTADO DOS SERVIÇOS -->
+                <div class="resultado-servicos">
+
+                    <!-- Cabelo -->
+                    <ul class="lista-servicos cabelo">
+                        <li><label><input type="checkbox" name="servicos" value="Corte Tradicional"> Corte
+                                Tradicional</label></li>
+                        <li><label><input type="checkbox" name="servicos" value="Corte Degradê"> Corte Degradê</label>
+                        </li>
+                        <li><label><input type="checkbox" name="servicos" value="Corte Social"> Corte Social</label>
+                        </li>
+                        <li><label><input type="checkbox" name="servicos" value="Corte Navalhado"> Corte
+                                Navalhado</label></li>
+                    </ul>
+
+                    <!-- Barba -->
+                    <ul class="lista-servicos barba" style="display: none;">
+                        <li><label><input type="checkbox" name="servicos" value="Barba Simples"> Barba Simples</label>
+                        </li>
+                        <li><label><input type="checkbox" name="servicos" value="Barba Modelada"> Barba Modelada</label>
+                        </li>
+                        <li><label><input type="checkbox" name="servicos" value="Barba + Toalha Quente"> Barba + Toalha
+                                Quente</label></li>
+                        <li><label><input type="checkbox" name="servicos" value="Limpeza de Rosto"> Limpeza de
+                                Rosto</label></li>
+                    </ul>
+
+                    <!-- Combo -->
+                    <ul class="lista-servicos combo" style="display: none;">
+                        <li><label><input type="checkbox" name="servicos" value="Corte + Barba"> Corte + Barba</label>
+                        </li>
+                        <li><label><input type="checkbox" name="servicos" value="Corte + Barba + Sobrancelha"> Corte +
+                                Barba + Sobrancelha</label></li>
+                        <li><label><input type="checkbox" name="servicos" value="Pacote Completo"> Pacote
+                                Completo</label></li>
+                    </ul>
+                </div>
+
+                <button type="submit" class="button-card" id="confirmarAgendamento">Confirmar Agendamento</button>
+
+            </form>
+
+        </div>
+    </div>
+    <footer class="footer-card">
+        <div class="Redes">
+
+            <p> Me siga nas redes </p>
+            <div class="icons-Redes">
+
+            </div>
+        </div>
+
+        <p><strong>Rua das Acácias, 123 — Centro</strong></p>
+        <p>📞 (11) 99999-9999</p>
+        <p>🕒 Seg–Sex: 08h às 19h | Sáb: 08h às 17h</p>
+
+
+
+    </footer>
+    <script>
+        // category toggle logic
+        document.querySelectorAll('.categorias button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const cat = btn.getAttribute('data-categoria');
+                document.querySelectorAll('.lista-servicos').forEach(list => {
+                    list.style.display = list.classList.contains(cat) ? 'block' : 'none';
+                });
+            });
+        });
+
+        // prevent actual submission for now (implement as needed)
+        document.getElementById('agendamentoForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Formulário enviado (a lógica real deve ser implementada)');
+        });
+    </script>
+</body>
+</body>
+
+</html>
