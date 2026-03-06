@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="button.css">
     <link rel="stylesheet" href="text.css">
     <link rel="stylesheet" href="carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -19,53 +22,61 @@
     <header class="header-card">
         <div class="header-content">
             <div class="logo-section">
-                <img src="Imagens/Logo.png" alt="CM Barbearia Logo" class="logo">
-                <h1 class="brand-name">CM Barbearia</h1>
+
+                <h1 class="brand-name"> <i class="fa-solid fa-scissors"></i>CM Barbearia</h1>
             </div>
             <nav class="navbar">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="#servicos" class="nav-link">Serviços</a>
                 <a href="#sobre-nos" class="nav-link">Sobre Nós</a>
                 <a href="#carousel" class="nav-link">Galeria</a>
-                <a href="form.html" class="nav-link">Agendar</a>
+                <a href="#" id="openAgendarNav" class="nav-link" style="background: black; color: white;"
+                    onclick="abrirModal(); return false;">Agendar</a>
             </nav>
         </div>
     </header>
     <main>
-        <div class="Center-card">
-            <h1>CM Barbearia</h1>
+        <div class="hero-content">
+            <h1> <i class="fa-solid fa-scissors"></i>CM Barbearia</h1>
             <p>Seu corte sua identidade</p>
             <p>Agende seu corte agora. Escolha o estilo e o horário ideal, e relaxe que a gente cuida do resto.</p>
         </div>
 
-        <a href="form.html" class="button-card">
+        <a href="#" id="openAgendarHero" class="button-card" onclick="abrirModal(); return false;">
             Agendar
         </a>
     </main>
 
     <section class="sobre-nos" id="sobre-nos">
         <div class="sobre-container">
-            <h2>Sobre a CM Barbearia</h2>
             <div class="sobre-content">
                 <div class="sobre-texto">
+                    <h2>Sobre a CM Barbearia</h2>
+
                     <p>
-                        Há mais de uma década, a CM Barbearia tem sido referência em cortes masculinos na região.
-                        Nossa equipe de profissionais experientes combina tradição e modernidade para oferecer
-                        serviços de qualidade excepcional.
+                        <strong>Endereço:</strong><br>
+                        Avenida Leonel de Moura Brizola, 1203<br>
+                        Centro – Duque de Caxias
                     </p>
+
                     <p>
-                        Utilizamos técnicas tradicionais aliadas às mais recentes tendências do mercado,
-                        garantindo que cada cliente saia satisfeito com seu novo visual. Nosso ambiente acolhedor
-                        e nossa atenção aos detalhes fazem da CM Barbearia muito mais do que uma simples barbearia
-                        - é um espaço onde você pode relaxar e cuidar da sua imagem.
+                        <strong>Horário de funcionamento:</strong><br>
+                        Segunda a Sábado: 09h às 21h<br>
+                        Domingo: 10h às 14h
                     </p>
+
                     <p>
-                        Venha nos conhecer e descubra por que tantos clientes confiam em nós para realçar
-                        sua identidade e estilo único.
+                        <strong>Observação:</strong> Aos domingos atendemos <strong>apenas clientes com horário
+                            agendado</strong>.
+                    </p>
+
+                    <p>
+                        <strong>Redes sociais:</strong><br>
+                        Siga no Instagram: @cmbarberbarbearia
                     </p>
                 </div>
                 <div class="sobre-imagem">
-                    <img src="Imagens/mainimg.jpg" alt="Interior da CM Barbearia">
+                    <img src="Imagens/FotoBarbeiro.jpg" alt="Fundador da CM Barbearia">
                 </div>
             </div>
         </div>
@@ -98,7 +109,7 @@
                 <!-- Card 2: Barba -->
                 <div class="servico-card">
                     <div class="servico-icon">
-                        <i class="fas fa-face-grin-beard"></i>
+                        <i class="fa-solid fa-face-smile"></i>
                     </div>
                     <h3>Barba & Rosto</h3>
                     <p>
@@ -137,6 +148,8 @@
     </section>
 
     <section class="galeria-fotos" id="carousel">
+        <h1 style="text-align: center; font-size: 40px; margin-bottom: 120px;">Galeria de Fotos</h1>
+
         <div class="galeria-container">
             <div class="galeria-grid">
                 <div class="galeria-item">
@@ -156,10 +169,187 @@
     </section>
 
     <footer class="footer-card">
-        <h3>CM Barber</h3>
-        <p>© 2024 Todos os direitos reservados</p>
+        <h3><i class="fa-solid fa-scissors"></i> CM Barber</h3>
+        <p>© Criado por Viktor-Synchron</p>
     </footer>
 
+
+
+    <div class="modal-overlay" id="agendamentoModal" style="display:none;">
+        <div class="Ag-card">
+            <div class="agendamento-card">
+                <span class="close-modal" onclick="fecharModal()">&times;</span>
+                <h2>Novo Agendamento</h2>
+                <form id="agendamentoForm">
+                    <div class="form-grid-2x2">
+                        <div class="campo-card">
+                            <label for="nome">
+                                <i class="fa-solid fa-user"></i>
+                                <span>Nome</span>
+                            </label>
+                            <input type="text" class="input-transparente" id="nome" name="nome"
+                                placeholder="Digite seu nome" required>
+                        </div>
+                        <div class="campo-card">
+                            <label for="telefone">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>Telefone / WhatsApp</span>
+                            </label>
+                            <input type="tel" class="input-transparente" id="telefone" name="telefone"
+                                placeholder="(21) 99999-9999" required>
+                        </div>
+                        <div class="campo-card">
+                            <label for="data">
+                                <i class="fa-solid fa-calendar"></i>
+                                <span>Data</span>
+                            </label>
+                            <input type="date" class="input-transparente" id="data" name="data" required>
+                        </div>
+                        <div class="campo-card">
+                            <label for="hora">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>Horário</span>
+                            </label>
+                            <input type="time" class="input-transparente" id="hora" name="hora" required>
+                        </div>
+                    </div>
+                    <div class="servicos-section">
+                        <h3 class="servicos-titulo">Selecione os Serviços</h3>
+                        <div class="categorias-filtro">
+                            <button type="button" data-categoria="todos" class="categoria-btn active">Todos</button>
+                            <button type="button" data-categoria="cabelo" class="categoria-btn">Cabelo</button>
+                            <button type="button" data-categoria="barba" class="categoria-btn">Barba e Rosto</button>
+                            <button type="button" data-categoria="estetica" class="categoria-btn">Estética
+                                Masculina</button>
+                        </div>
+                        <div class="servicos-lista">
+
+                            <div class="servico-item" data-categoria="cabelo">
+                                <div class="servico-info">
+                                    <h4>Corte Tradicional</h4>
+                                    <p>Corte clássico com tesoura e máquina, apenas um retoque no que já é bom.
+                                    </p>
+                                    <span class="servico-preco">R$ 25,00</span>
+                                </div>
+                                <input type="checkbox" name="servicos" value="Corte Tradicional" data-preco="25.00">
+                            </div>
+
+                            <div class="servico-item" data-categoria="cabelo">
+                                <div class="servico-info">
+                                    <h4>Corte Degradê</h4>
+                                    <p>Técnica moderna com transição suave entre comprimentos, ideal para looks
+                                        contemporâneos.</p>
+                                    <span class="servico-preco">R$ 35,00</span>
+                                </div>
+                                <input type="checkbox" name="servicos" value="Corte Degradê" data-preco="35.00">
+                            </div>
+
+                            <div class="servico-item" data-categoria="cabelo">
+                                <div class="servico-info">
+                                    <h4>Corte na Tesoura</h4>
+                                    <p>Corte limpo e profissional, melhor para cabelos lisos.</p>
+                                    <span class="servico-preco">R$ 40,00</span>
+                                </div>
+                                <input type="checkbox" name="servicos" value="Corte na Tesoura" data-preco="30.00">
+                            </div>
+
+                            <div class="servico-item" data-categoria="cabelo">
+                                <div class="servico-info">
+                                    <h4>Corte Navalhado</h4>
+                                    <p>Técnica precisa com navalha para acabamento perfeito e detalhes minuciosos.</p>
+                                    <span class="servico-preco">R$ 40,00</span>
+                                </div>
+                                <input type="checkbox" name="servicos" value="Corte Navalhado" data-preco="40.00">
+                            </div>
+
+                            <!-- BARBA -->
+                            <div class="servico-item" data-categoria="barba">
+                                <div class="servico-info">
+                                    <h4>Barba Simples</h4>
+                                    <p>Aparar e modelar a barba com tesoura e máquina para manutenção básica.</p>
+                                    <span class="servico-preco">R$ 20,00</span>
+                                </div>
+                                <input type="checkbox" name="servicos" value="Barba Simples" data-preco="20.00">
+                            </div>
+
+                            <div class="servico-item" data-categoria="barba">
+                                <div class="servico-info">
+                                    <h4>Barba Modelada</h4>
+                                    <p>Modelagem artística da barba com técnicas especiais para contornos perfeitos.</p>
+                                    <span class="servico-preco">R$ 30,00</span>
+                                </div>
+                                <input type="checkbox" name="servicos" value="Barba Modelada" data-preco="30.00">
+                            </div>
+
+                            <div class="servico-item" data-categoria="barba">
+                                <div class="servico-info">
+                                    <h4>Barba + Toalha Quente</h4>
+                                    <p>Tratamento completo com toalha quente para hidratação profunda dos pelos.</p>
+                                    <span class="servico-preco">R$ 35,00</span>
+                                </div>
+                                <input type="checkbox" name="servicos" value="Barba + Toalha Quente" data-preco="35.00">
+                            </div>
+
+                            <div class="servico-item" data-categoria="barba">
+                                <div class="servico-info">
+                                    <h4>Limpeza de Rosto</h4>
+                                    <p>Limpeza profunda da pele com extração de cravos e hidratação facial.</p>
+                                    <span class="servico-preco">R$ 25,00</span>
+                                </div>
+                                <input type="checkbox" name="servicos" value="Limpeza de Rosto" data-preco="25.00">
+                            </div>
+
+                            <!-- ESTÉTICA MASCULINA -->
+                            <div class="servico-item" data-categoria="estetica">
+                                <div class="servico-info">
+                                    <h4>Design de Sobrancelha</h4>
+                                    <p>Modelagem profissional de sobrancelhas para um rosto mais harmonioso.</p>
+                                    <span class="servico-preco">R$ 25,00</span>
+                                </div>
+                                <input type="checkbox" name="servicos" value="Design de Sobrancelha" data-preco="25.00">
+                            </div>
+
+                            <div class="servico-item" data-categoria="estetica">
+                                <div class="servico-info">
+                                    <h4>Limpeza Facial</h4>
+                                    <p>Limpeza profunda da pele com extração de impurezas e hidratação.</p>
+                                    <span class="servico-preco">R$ 30,00</span>
+                                </div>
+                                <input type="checkbox" name="servicos" value="Limpeza Facial" data-preco="30.00">
+                            </div>
+
+                            <div class="servico-item" data-categoria="estetica">
+                                <div class="servico-info">
+                                    <h4>Hidratação Premium</h4>
+                                    <p>Tratamento de hidratação intensa para renovar a pele do rosto.</p>
+                                    <span class="servico-preco">R$ 35,00</span>
+                                </div>
+                                <input type="checkbox" name="servicos" value="Hidratação Premium" data-preco="35.00">
+                            </div>
+
+                            <div class="servico-item" data-categoria="estetica">
+                                <div class="servico-info">
+                                    <h4>Tratamento Anti-Idade</h4>
+                                    <p>Procedimento especializado para reduzir sinais de envelhecimento.</p>
+                                    <span class="servico-preco">R$ 40,00</span>
+                                </div>
+                                <input type="checkbox" name="servicos" value="Tratamento Anti-Idade" data-preco="40.00">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-footer">
+                        <div class="total-section">
+                            <span class="total-label">Total:</span>
+                            <span class="total-value" id="totalValue">R$ 0,00</span>
+                        </div>
+                        <button type="submit" class="button-card" id="confirmarAgendamento">Agendar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script src="Program.js"></script>
+</body>
 
 </html>

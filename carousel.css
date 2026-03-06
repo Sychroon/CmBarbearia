@@ -1,4 +1,8 @@
-/* Galeria de Fotos */
+/* ===========================================
+   CAROUSEL.CSS - Galeria de Fotos Otimizada
+   =========================================== */
+
+/* ========== GALERIA DE FOTOS ========== */
 .galeria-fotos {
     width: 100%;
     background: linear-gradient(180deg, #000000 0%, #1a1a1a 50%, #000000 100%);
@@ -25,6 +29,7 @@
     aspect-ratio: 1;
     box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
     border: 2px solid #333333;
+    transition: all 0.3s ease;
 }
 
 .galeria-item img {
@@ -32,7 +37,7 @@
     height: 100%;
     object-fit: cover;
     filter: grayscale(100%);
-    transition: filter 0.4s ease;
+    transition: all 0.4s ease;
     cursor: pointer;
 }
 
@@ -41,11 +46,9 @@
     transform: scale(1.05);
 }
 
-.galeria-item img {
-    transition: filter 0.4s ease, transform 0.4s ease;
-}
+/* ========== RESPONSIVIDADE ========== */
 
-/* Responsividade Galeria */
+/* Tablets */
 @media (max-width: 1200px) {
     .galeria-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -80,62 +83,5 @@
 
     .galeria-item {
         border-radius: 6px;
-    }
-}
-
-
-.carousel-btn {
-    padding: 12px 16px;
-    font-size: 18px;
-    width: 48px;
-    height: 48px;
-}
-
-.carousel-btn-prev {
-    left: 10px;
-}
-
-.carousel-btn-next {
-    right: 10px;
-}
-
-.carousel-dots {
-    gap: 10px;
-    margin-top: 25px;
-}
-
-
-@media (max-width: 480px) {
-    .carousel {
-        padding: 30px 10px;
-    }
-
-    .carousel-container {
-        border-width: 2px;
-    }
-
-    .carousel-btn {
-        padding: 10px 14px;
-        font-size: 16px;
-        width: 42px;
-        height: 42px;
-    }
-
-    .carousel-btn-prev {
-        left: 5px;
-    }
-
-    .carousel-btn-next {
-        right: 5px;
-    }
-
-    .dot {
-        width: 12px;
-        height: 12px;
-    }
-
-    .carousel-dots {
-        gap: 8px;
-        margin-top: 20px;
     }
 }

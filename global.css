@@ -15,12 +15,6 @@ body {
     font-family: 'Cinzel', serif;
 }
 
-body.form-body {
-    background: linear-gradient(180deg, #000000 0%, #0a0a0a 50%, #000000 100%);
-    background-attachment: fixed;
-    color: #FFFFFF;
-}
-
 main {
     display: flex;
     flex-direction: column;
@@ -59,12 +53,53 @@ main>* {
         min-height: auto;
         padding: 60px 20px;
     }
+
+    /* cabeçalho e navegação em telas médias */
+    .navbar {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    /* serviços passa a coluna única em tablets
+       para evitar cards lado a lado */
+    .servicos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .galeria-item img {
+        height: auto;
+    }
 }
 
 /* Responsividade para celulares */
 @media (max-width: 480px) {
     main {
         padding: 40px 15px;
+    }
+
+    /* navbar em celular vira coluna para evitar quebra estranha */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -108,8 +143,8 @@ main>* {
     font-size: 2.5rem;
     font-weight: 700;
     color: #FFFFFF;
-    text-align: center;
-    margin-bottom: 50px;
+    text-align: left;
+    margin-bottom: 30px;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -118,7 +153,34 @@ main>* {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    align-items: center;
+    align-items: flex-start;
+}
+
+.sobre-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sobre-imagem {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 100%;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    max-width: 320px;
+    /* controla largura */
+    height: auto;
+    /* mantém proporção retrato */
+    max-height: 420px;
+    /* evita imagem gigante */
+    object-fit: cover;
+
+    border-radius: 16px;
+    /* borda arredondada */
 }
 
 .sobre-texto p {
@@ -128,14 +190,6 @@ main>* {
     color: #CCCCCC;
     margin-bottom: 25px;
     text-align: justify;
-}
-
-.sobre-imagem img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsividade Sobre Nós */
@@ -290,35 +344,27 @@ main>* {
     }
 }
 
+
 @media (max-width: 1200px) {
     .servicos-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-}
 
+    .sobre-nos h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
 
+    .sobre-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 
-.sobre-nos h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-}
+    .sobre-texto p {
+        font-size: 1rem;
+        text-align: left;
+    }
 
-.sobre-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-}
-
-.sobre-texto p {
-    font-size: 1rem;
-    text-align: left;
-}
-
-.sobre-imagem img {
-    height: 250px;
-}
-
-
-@media (max-width: 480px) {
     .sobre-nos {
         padding: 40px 10px;
     }

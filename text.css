@@ -1,6 +1,10 @@
+/* ===========================================
+   TEXT.CSS - Tipografia e Textos Otimizados
+   =========================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cinzel:wght@600;700;800&family=Poppins:wght@400;600;700&display=swap');
 
-/* Estilo para h1 - Título principal artístico */
+/* ========== TÍTULOS PRINCIPAIS ========== */
 h1 {
     font-family: 'Playfair Display', serif;
     font-size: 96px;
@@ -33,77 +37,110 @@ h1 {
     }
 }
 
-/* Subtítulo */
-.Center-card p:first-of-type {
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: 0.5px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
+/* ================================
+   HERO - FAIXA ESCURA PARA TEXTO
+================================ */
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.75);
+    /* faixa preta translúcida */
+    padding: 30px 40px;
+    border-radius: 12px;
+    max-width: 830px;
+    margin: 10px;
+    text-align: center;
+    /* centraliza todo o conteúdo */
 }
 
-/* Parágrafos descritivos */
-.Center-card p:last-of-type {
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+/* ================================
+   TÍTULO PRINCIPAL
+================================ */
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    /* estilo mais elegante */
+    font-size: 72px;
+    color: #ffffff;
+    /* marrom barbearia */
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+/* ================================
+   TEXTO PRINCIPAL
+================================ */
+
+.hero-content p:first-of-type {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
     font-weight: 600;
     color: #ffffff;
-    line-height: 1.8;
-    letter-spacing: 0px;
-    text-shadow: none;
-}
-
-.Center-card {
+    /* marrom claro */
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
     text-align: center;
-    padding: 60px 50px;
-    border-radius: 15px;
-    max-width: 700px;
-    position: relative;
-    z-index: 10;
 }
 
-/* Responsividade para tablets */
+/* ================================
+   TEXTO SECUNDÁRIO
+================================ */
+
+.hero-content p:last-of-type {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #f5f5f5;
+    /* branco suave para contraste */
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+/* Tablets */
 @media (max-width: 768px) {
-    h1 {
+
+    .hero-content {
+        padding: 25px;
+        max-width: 90%;
+    }
+
+    .hero-content h1 {
         font-size: 56px;
         letter-spacing: 2px;
     }
 
-    .Center-card p:first-of-type {
+    .hero-content p:first-of-type {
         font-size: 20px;
     }
 
-    .Center-card p:last-of-type {
+    .hero-content p:last-of-type {
         font-size: 15px;
-    }
-
-    .Center-card {
-        padding: 40px 30px;
-        max-width: 90vw;
     }
 }
 
-/* Responsividade para celulares */
+/* Celulares */
 @media (max-width: 480px) {
-    h1 {
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .hero-content h1 {
         font-size: 36px;
         letter-spacing: 1px;
     }
 
-    .Center-card p:first-of-type {
+    .hero-content p:first-of-type {
         font-size: 16px;
     }
 
-    .Center-card p:last-of-type {
+    .hero-content p:last-of-type {
         font-size: 13px;
         letter-spacing: 0.5px;
-    }
-
-    .Center-card {
-        padding: 30px 20px;
-        max-width: 95vw;
-        border: 1px solid #ffd700;
     }
 }
